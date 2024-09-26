@@ -26,3 +26,4 @@ Category -> recipe -> review/comment
 
 • Authentication - JWT tokens
 
+![Sample GIF showing feature](./assets/sample.gif)
