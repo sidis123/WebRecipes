@@ -2,7 +2,7 @@
 
 T120B165 Saityno taikomųjų programų projektavimas modulio projektas
 
-#A recipe "social media site"
+##A recipe "social media site"
 
 A website for Recipes, where people can post recipes put comments on the recipes they like and so on.. Each recipe has a category , is made up out of products, and may or may not have reviews/comments from users.
 
