@@ -17,7 +17,12 @@ A website for Recipes, where people can post recipes put comments on the recipes
 Category -> recipe -> review/comment
 
 ## Tech stack as of now
+
 • FE - angular
+
 • BE - .Net
+
 • DB - MicrosoftSQL server
+
 • Authentication - JWT tokens
+
