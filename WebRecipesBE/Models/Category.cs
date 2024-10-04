@@ -9,5 +9,8 @@ namespace WebRecipesBE.Models
         public int id_Kategorija { get; set; }
         [Column(TypeName = "nvarchar(100)")]
         public string pavadinimas { get; set; }
+
+        public ICollection<RecipeCategory> ReceptuKategorijos { get; set; }
+
     }
 }
