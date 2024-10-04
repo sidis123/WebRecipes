@@ -1,6 +1,9 @@
 //using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using WebRecipesBE;
+using WebRecipesBE.Data;
+
 //using WebRecipesBE.Data;
 using WebRecipesBE.Interfaces;
 using WebRecipesBE.Repository;
@@ -13,6 +16,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//cia kontextui
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 var app = builder.Build();
 
