@@ -1,46 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\",
+  "WorkspaceRootPath": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Migrations\\20241012183444_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241012183444_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\interfaces\\ireciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:interfaces\\ireciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webbrecipes\\webrecipes\\webrecipesbe\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\repository\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:repository\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webbrecipes\\webrecipes\\webrecipesbe\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Migrations\\20241012182106_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241012182106_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webbrecipes\\webrecipes\\webrecipesbe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webbrecipes\\webrecipes\\webrecipesbe\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webbrecipes\\webrecipes\\webrecipesbe\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webbrecipes\\webrecipes\\webrecipesbe\\models\\recipecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\recipecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webbrecipes\\webrecipes\\webrecipesbe\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webbrecipes\\webrecipes\\webrecipesbe\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\models\\recipecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\recipecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\dto\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:dto\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\dto\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:dto\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\dto\\recipedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:dto\\recipedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\interfaces\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:interfaces\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipesnew\\webrecipes\\webrecipesbe\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,136 +78,227 @@
       "DocumentGroups": [
         {
           "DockedWidth": 39,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241012183444_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Migrations\\20241012183444_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241012183444_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Migrations\\20241012183444_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20241012183444_InitialCreate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "RecipeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Repository\\RecipeRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\RecipeRepository.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Repository\\RecipeRepository.cs",
+              "RelativeToolTip": "Repository\\RecipeRepository.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowAYAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T18:34:44.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20241012182106_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Migrations\\20241012182106_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241012182106_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Migrations\\20241012182106_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20241012182106_InitialCreate.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T18:21:07.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Seed.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Seed.cs",
-              "RelativeDocumentMoniker": "Seed.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Seed.cs",
-              "RelativeToolTip": "Seed.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAowGEAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T18:04:40.366Z",
+              "WhenOpened": "2024-10-12T19:34:06.867Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAcwCIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T18:00:04.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "RecipeCategory.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Models\\RecipeCategory.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Models\\RecipeCategory.cs",
               "RelativeDocumentMoniker": "Models\\RecipeCategory.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Models\\RecipeCategory.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Models\\RecipeCategory.cs",
               "RelativeToolTip": "Models\\RecipeCategory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T18:00:14.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "Data\\DataContext.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Data\\DataContext.cs",
-              "RelativeToolTip": "Data\\DataContext.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAmwCwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T17:55:38.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T17:55:15.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Recipe.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Models\\Recipe.cs",
-              "RelativeDocumentMoniker": "Models\\Recipe.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Models\\Recipe.cs",
-              "RelativeToolTip": "Models\\Recipe.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T17:55:04.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T17:59:08.815Z",
+              "WhenOpened": "2024-10-12T18:44:57.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Models\\Recipe.cs",
+              "RelativeDocumentMoniker": "Models\\Recipe.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Models\\Recipe.cs",
+              "RelativeToolTip": "Models\\Recipe.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBIAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T18:44:59.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IRecipeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Interfaces\\IRecipeRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IRecipeRepository.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Interfaces\\IRecipeRepository.cs",
+              "RelativeToolTip": "Interfaces\\IRecipeRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T19:28:38.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CommentDto.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\DTO\\CommentDto.cs",
+              "RelativeDocumentMoniker": "DTO\\CommentDto.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\DTO\\CommentDto.cs",
+              "RelativeToolTip": "DTO\\CommentDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T20:35:49.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T20:37:11.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\DTO\\UserDto.cs",
+              "RelativeDocumentMoniker": "DTO\\UserDto.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\DTO\\UserDto.cs",
+              "RelativeToolTip": "DTO\\UserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T20:36:01.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T20:36:08.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\DTO\\CategoryDto.cs",
+              "RelativeDocumentMoniker": "DTO\\CategoryDto.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\DTO\\CategoryDto.cs",
+              "RelativeToolTip": "DTO\\CategoryDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T20:35:41.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RecipeController.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Controllers\\RecipeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RecipeController.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Controllers\\RecipeController.cs",
+              "RelativeToolTip": "Controllers\\RecipeController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwC8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T19:39:48.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RecipeDto.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\DTO\\RecipeDto.cs",
+              "RelativeDocumentMoniker": "DTO\\RecipeDto.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\DTO\\RecipeDto.cs",
+              "RelativeToolTip": "DTO\\RecipeDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T20:06:05.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Helper\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "Helper\\MappingProfiles.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Helper\\MappingProfiles.cs",
+              "RelativeToolTip": "Helper\\MappingProfiles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T20:19:45.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T18:45:31.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Comment.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Models\\Comment.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Models\\Comment.cs",
               "RelativeDocumentMoniker": "Models\\Comment.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Models\\Comment.cs",
               "RelativeToolTip": "Models\\Comment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T17:55:12.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Interfaces\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ICategoryRepository.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Interfaces\\ICategoryRepository.cs",
+              "RelativeToolTip": "Interfaces\\ICategoryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T19:28:22.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ICommentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Interfaces\\ICommentRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ICommentRepository.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Interfaces\\ICommentRepository.cs",
+              "RelativeToolTip": "Interfaces\\ICommentRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T19:28:37.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\Data\\DataContext.cs",
+              "RelativeToolTip": "Data\\DataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T18:45:12.684Z",
               "EditorCaption": ""
             }
           ]
