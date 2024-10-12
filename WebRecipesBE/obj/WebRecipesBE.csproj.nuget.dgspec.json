@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj": {}
+    "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj": {
+    "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj",
+        "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj",
         "projectName": "WebRecipesBE",
-        "projectPath": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj",
+        "projectPath": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj",
         "packagesPath": "C:\\Users\\tnaru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\obj\\",
+        "outputPath": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -53,17 +53,23 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

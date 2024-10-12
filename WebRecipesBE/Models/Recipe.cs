@@ -14,6 +14,10 @@ namespace WebRecipesBE.Models
         [Column(TypeName = "nvarchar(100)")]
         public string instrukcija { get; set; }
 
+        public User User { get; set; }
+
+        public ICollection<Comment> Comments { get; set; }
+
         public ICollection<RecipeCategory> ReceptuKategorijos { get; set; }
     }
 }

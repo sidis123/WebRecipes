@@ -18,6 +18,10 @@ namespace WebRecipesBE.Models
         [Column(TypeName = "nvarchar(100)")]
         public string telefonas { get; set; }
         public int role { get; set; }
+
+        public ICollection<Recipe> Recipes { get; set; }
+
+        public ICollection<Comment> Comments { get; set; }
     }
 
 }
