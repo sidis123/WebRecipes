@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "K6n2pO2YW88=",
+  "dgSpecHash": "v1OjckacWA8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tnaru\\Desktop\\webbrecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj",
+  "projectFilePath": "C:\\Users\\tnaru\\Desktop\\WebRecipesNew\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\tnaru\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\tnaru\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\tnaru\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\tnaru\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
