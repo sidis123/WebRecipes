@@ -12,15 +12,15 @@ using WebRecipesBE.Data;
 namespace WebRecipesBE.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241004065525_First Migration")]
-    partial class FirstMigration
+    [Migration("20241012183444_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -50,6 +50,12 @@ namespace WebRecipesBE.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id_Komentaras"));
 
+                    b.Property<int>("Recipeid_Receptas")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Userid_Vartotojas")
+                        .HasColumnType("int");
+
                     b.Property<int>("patiktukai")
                         .HasColumnType("int");
 
@@ -62,6 +68,10 @@ namespace WebRecipesBE.Migrations
 
                     b.HasKey("id_Komentaras");
 
+                    b.HasIndex("Recipeid_Receptas");
+
+                    b.HasIndex("Userid_Vartotojas");
+
                     b.ToTable("Comments");
                 });
 
@@ -72,6 +82,9 @@ namespace WebRecipesBE.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id_Receptas"));
+
+                    b.Property<int>("Userid_Vartotojas")
+                        .HasColumnType("int");
 
                     b.Property<string>("instrukcija")
                         .IsRequired()
@@ -87,18 +100,20 @@ namespace WebRecipesBE.Migrations
 
                     b.HasKey("id_Receptas");
 
+                    b.HasIndex("Userid_Vartotojas");
+
                     b.ToTable("Recipes");
                 });
 
             modelBuilder.Entity("WebRecipesBE.Models.RecipeCategory", b =>
                 {
-                    b.Property<int>("RecipeID")
+                    b.Property<int>("RecipeId")
                         .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.HasKey("RecipeID", "CategoryId");
+                    b.HasKey("RecipeId", "CategoryId");
 
                     b.HasIndex("CategoryId");
 
@@ -141,6 +156,36 @@ namespace WebRecipesBE.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("WebRecipesBE.Models.Comment", b =>
+                {
+                    b.HasOne("WebRecipesBE.Models.Recipe", "Recipe")
+                        .WithMany("Comments")
+                        .HasForeignKey("Recipeid_Receptas")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebRecipesBE.Models.User", "User")
+                        .WithMany("Comments")
+                        .HasForeignKey("Userid_Vartotojas")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Recipe");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("WebRecipesBE.Models.Recipe", b =>
+                {
+                    b.HasOne("WebRecipesBE.Models.User", "User")
+                        .WithMany("Recipes")
+                        .HasForeignKey("Userid_Vartotojas")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("WebRecipesBE.Models.RecipeCategory", b =>
                 {
                     b.HasOne("WebRecipesBE.Models.Category", "Category")
@@ -151,7 +196,7 @@ namespace WebRecipesBE.Migrations
 
                     b.HasOne("WebRecipesBE.Models.Recipe", "Recipe")
                         .WithMany("ReceptuKategorijos")
-                        .HasForeignKey("RecipeID")
+                        .HasForeignKey("RecipeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -167,7 +212,16 @@ namespace WebRecipesBE.Migrations
 
             modelBuilder.Entity("WebRecipesBE.Models.Recipe", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("ReceptuKategorijos");
+                });
+
+            modelBuilder.Entity("WebRecipesBE.Models.User", b =>
+                {
+                    b.Navigation("Comments");
+
+                    b.Navigation("Recipes");
                 });
 #pragma warning restore 612, 618
         }
