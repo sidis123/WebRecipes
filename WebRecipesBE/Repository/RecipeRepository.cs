@@ -12,7 +12,7 @@ namespace WebRecipesBE.Repository
             _context = context;   
         }
 
-        public bool CreateRecipe(int categoryId, Recipe recipe)
+        public bool CreateRecipe(int categoryId,int userId, Recipe recipe)
         {
             
             var category = _context.Categories.Where(c => c.id_Kategorija == categoryId).FirstOrDefault();
@@ -20,8 +20,9 @@ namespace WebRecipesBE.Repository
             var recipeCategory = new RecipeCategory()
             {
                 Category = category,
-                Recipe = recipe,
+                Recipe = recipe
             };
+
             _context.Add(recipeCategory);
 
             _context.Add(recipe);
@@ -45,6 +46,11 @@ namespace WebRecipesBE.Repository
             return _context.Recipes.Where(r => r.id_Receptas == id).FirstOrDefault();
         }
 
+        public int GetUserIdFromRecipe(Recipe recipe)
+        {
+            return _context.Recipes.Where(r => r.id_Receptas == recipe.id_Receptas).Select(u => u.User.id_Vartotojas).FirstOrDefault();
+        }
+
         public bool RecipeExists(int id)
         {
             return _context.Recipes.Any(r => r.id_Receptas == id);
@@ -58,7 +64,8 @@ namespace WebRecipesBE.Repository
 
         public bool UpdateRecipe(Recipe recipe)
         {
-            throw new NotImplementedException();
+            _context.Update(recipe);
+            return Save();
         }
     }
 }
