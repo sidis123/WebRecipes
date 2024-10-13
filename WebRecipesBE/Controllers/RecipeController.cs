@@ -12,6 +12,7 @@ namespace WebRecipesBE.Controllers
     public class RecipeController : Controller
     {
         private readonly IRecipeRepository _recipeRepository;
+
         private readonly IMapper _mapper;
 
         public RecipeController(IRecipeRepository recipeRepository, IMapper mapper)
