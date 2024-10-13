@@ -9,7 +9,6 @@ namespace WebRecipesBE.DTO
         public int patiktukai { get; set; }
         public DateTime sukurimo_data { get; set; }
         public string tekstas { get; set; }
-
-
+  
     }
 }

@@ -9,6 +9,7 @@ namespace WebRecipesBE.Interfaces
         bool UpdateCategory(Category category);
         bool DeleteCategory(Category category);//reikia paduoti entity o ne tik id !!!! id gausim per parametrus
         ICollection<Category> GetAllCategories();
+        bool CategoryExists(int id);
         bool Save();
     }
 }

@@ -9,6 +9,10 @@ namespace WebRecipesBE.Interfaces
         bool UpdateComment(Comment comment);
         bool DeleteComment(Comment comment);
         ICollection<Comment> GetAllComments();
+        bool CommentExists(int id);
+        int GetUserIDForComment(int commentId);
+        int GetRecipeIDForComment(int commentId);
+
         bool Save();
     }
 }
