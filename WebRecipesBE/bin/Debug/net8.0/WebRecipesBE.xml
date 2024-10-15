@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebRecipesBE</name>
+    </assembly>
+    <members>
+        <member name="M:WebRecipesBE.Controllers.CategoryController.GetCategories">
+            <summary>
+            Retrieves all Categories 
+            </summary>
+            <returns>All categories as a list.</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.CategoryController.GetCategory(System.Int32)">
+            <summary>
+            Retrieves a specific category by ID
+            </summary>
+            <param name="Catid"> The ID of the category to retrieve </param>
+            <returns>The retrieved category</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.CategoryController.CreateCategory(WebRecipesBE.DTO.CategoryDto)">
+            <summary>
+            Creates a category
+            </summary>
+            <param> The body of a category in .json form </param>
+            <returns>201 if created , other error code if something is wrong</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.CategoryController.UpdateCategory(System.Int32,WebRecipesBE.DTO.CategoryDto)">
+            <summary>
+            Updates a specific category by ID
+            </summary>
+            <param name="categoryId"> The ID of the category to update </param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.CategoryController.DeleteCategory(System.Int32)">
+            <summary>
+            Deletes a specific category by ID
+            </summary>
+            <param name="categoryId"> The ID of the category to delete </param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.CommentController.GetAllComments">
+            <summary>
+            Retrieves All comments
+            </summary>
+            <returns>All of the comments as a list</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.CommentController.GetComment(System.Int32)">
+            <summary>
+            Retrieves a specific comment by ID
+            </summary>
+            <param name="id"> The ID of the comment to retrieve </param>
+            <returns>The retrieved comment</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.CommentController.CreateComment(System.Int32,System.Int32,WebRecipesBE.DTO.CommentDto)">
+            <summary>
+            Creates a Comment
+            </summary>
+            <param name="userId"> The ID of the user who wrote the comment </param>
+            <param name="recipeId"> The ID of the recipe that the comment ios written on </param>
+            <param name="commentCreate"> The body ofg the comment in .json format </param>
+            <returns>201 if successfully created , other code if something went wrong</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.CommentController.UpdateComment(System.Int32,WebRecipesBE.DTO.CommentDto)">
+            <summary>
+            Updates a specific comment by ID
+            </summary>
+            <param name="commentId"> The ID of the comment to update </param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.CommentController.DeleteComment(System.Int32)">
+            <summary>
+            Deletes a specific comment by ID
+            </summary>
+            <param name="commentId"> The ID of the comment to delete </param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.RecipeController.GetAllRecipes">
+            <summary>
+            Retrieves all Recipes
+            </summary>
+            <returns>A list of recipes</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.RecipeController.GetRecipe(System.Int32)">
+            <summary>
+            retrieves a specific recipe by ID
+            </summary>
+            <param name="id"> The ID of the recipe to retrieve </param>
+            <returns>The retrieved recipe in a .json format</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.RecipeController.CreateRecipe(System.Int32,System.Int32,WebRecipesBE.DTO.RecipeDto)">
+            <summary>
+            Creates a recipe
+            </summary>
+            <param name="categoryId"> The category that will specify the recipe </param>
+            <param name="userId"> The ID of the user who is creating the recipe </param>
+            <param name="recipeCreate"> The body of the recipe in a .json format </param>
+            <returns>201 if created , other error if something went wrong</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.RecipeController.UpdateRecipe(System.Int32,WebRecipesBE.DTO.RecipeDto)">
+            <summary>
+            Updates a specific recipe by ID
+            </summary>
+            <param name="recipeId"> The ID of the recipe to update </param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.RecipeController.DeleteRecipe(System.Int32)">
+            <summary>
+            Deletes a specific recipe by ID
+            </summary>
+            <param name="recipeId"> The ID of the recipe to delete </param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.UserController.GetAllUsers">
+            <summary>
+            Retrieves all the users
+            </summary>
+            <returns>A list of users</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.UserController.GetUser(System.Int32)">
+            <summary>
+            Retrieves a specific user by ID
+            </summary>
+            <param name="id"> The ID of the user to retrieve </param>
+            <returns>200 with the body of the retrieved user in .json format</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.UserController.CreateUser(WebRecipesBE.DTO.UserDto)">
+            <summary>
+            Creates a User
+            </summary>
+            <param name="userCreate"> The body of the user entity in .json format </param>
+            <returns>201 if the user was created succesfully, other code if something went wrong</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.UserController.UpdateUser(System.Int32,WebRecipesBE.DTO.UserDto)">
+            <summary>
+            Updates a specific user by ID
+            </summary>
+            <param name="userId"> The ID of the user to update </param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:WebRecipesBE.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            Deletes a specific user by ID
+            </summary>
+            <param name="userId"> The ID of the user to delete </param>
+            <returns>No content</returns>
+        </member>
+        <member name="T:WebRecipesBE.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:WebRecipesBE.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebRecipesBE.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebRecipesBE.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

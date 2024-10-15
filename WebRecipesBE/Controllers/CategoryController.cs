@@ -19,6 +19,10 @@ namespace WebRecipesBE.Controllers
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Retrieves all Categories 
+        /// </summary>
+        /// <returns>All categories as a list.</returns>
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Category>))]//jeigu lista grazinam ar daug tu dalyku grazinam tai reikia krc IEnumerable daryt
         public IActionResult GetCategories()
@@ -31,9 +35,16 @@ namespace WebRecipesBE.Controllers
             return Ok(categories);
         }
 
+
+        /// <summary>
+        /// Retrieves a specific category by ID
+        /// </summary>
+        /// <param name="Catid"> The ID of the category to retrieve </param>
+        /// <returns>The retrieved category</returns>
         [HttpGet("{Catid}")]
         [ProducesResponseType(200, Type = typeof(Category))]
         [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public IActionResult GetCategory(int Catid)
         {
             if (!_categoryRepository.CategoryExists(Catid))
@@ -48,7 +59,14 @@ namespace WebRecipesBE.Controllers
             return Ok(category);
         }
 
+
+        /// <summary>
+        /// Creates a category
+        /// </summary>
+        /// <param> The body of a category in .json form </param>
+        /// <returns>201 if created , other error code if something is wrong</returns>
         [HttpPost]
+        [ProducesResponseType(201)]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         public IActionResult CreateCategory([FromBody] CategoryDto categoryCreate)//reikia FromBody , nes jis paims data is jsono
@@ -75,9 +93,15 @@ namespace WebRecipesBE.Controllers
                 ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);
             }
-            return Ok("Successfully created");
+            return StatusCode(201,"Successfully created");
         }
 
+
+        /// <summary>
+        /// Updates a specific category by ID
+        /// </summary>
+        /// <param name="categoryId"> The ID of the category to update </param>
+        /// <returns>No content</returns>
         [HttpPut("{categoryId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -110,6 +134,12 @@ namespace WebRecipesBE.Controllers
             return NoContent();
         }
 
+
+        /// <summary>
+        /// Deletes a specific category by ID
+        /// </summary>
+        /// <param name="categoryId"> The ID of the category to delete </param>
+        /// <returns>No content</returns>
         [HttpDelete("{categoryId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]

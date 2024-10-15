@@ -20,6 +20,11 @@ namespace WebRecipesBE.Controllers
             _mapper = mapper;
         }
 
+
+        /// <summary>
+        /// Retrieves all the users
+        /// </summary>
+        /// <returns>A list of users</returns>
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<User>))]
         public IActionResult GetAllUsers()
@@ -34,6 +39,11 @@ namespace WebRecipesBE.Controllers
             return Ok(recipes);
         }
 
+        /// <summary>
+        /// Retrieves a specific user by ID
+        /// </summary>
+        /// <param name="id"> The ID of the user to retrieve </param>
+        /// <returns>200 with the body of the retrieved user in .json format</returns>
         [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(User))]
         [ProducesResponseType(400)]
@@ -52,7 +62,13 @@ namespace WebRecipesBE.Controllers
             return Ok(recipe);
         }
 
+        /// <summary>
+        /// Creates a User
+        /// </summary>
+        /// <param name="userCreate"> The body of the user entity in .json format </param>
+        /// <returns>201 if the user was created succesfully, other code if something went wrong</returns>
         [HttpPost]
+        [ProducesResponseType(201)]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         public IActionResult CreateUser([FromBody] UserDto userCreate)//reikia FromBody , nes jis paims data is jsono
@@ -79,9 +95,14 @@ namespace WebRecipesBE.Controllers
                 ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);
             }
-            return Ok("Successfully created");
+            return StatusCode(201,"Successfully created");
         }
 
+        /// <summary>
+        /// Updates a specific user by ID
+        /// </summary>
+        /// <param name="userId"> The ID of the user to update </param>
+        /// <returns>No content</returns>
         [HttpPut("{userId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -114,6 +135,12 @@ namespace WebRecipesBE.Controllers
             return NoContent();
         }
 
+
+        /// <summary>
+        /// Deletes a specific user by ID
+        /// </summary>
+        /// <param name="userId"> The ID of the user to delete </param>
+        /// <returns>No content</returns>
         [HttpDelete("{userId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
