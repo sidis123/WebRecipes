@@ -24,6 +24,12 @@ namespace WebRecipesBE.Controllers
             _userRepository = userRepository;
         }
 
+
+
+        /// <summary>
+        /// Retrieves all Recipes
+        /// </summary>
+        /// <returns>A list of recipes</returns>
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Recipe>))]
         public IActionResult GetAllRecipes()
@@ -38,6 +44,12 @@ namespace WebRecipesBE.Controllers
             return Ok(recipes);
         }
 
+
+        /// <summary>
+        /// retrieves a specific recipe by ID
+        /// </summary>
+        /// <param name="id"> The ID of the recipe to retrieve </param>
+        /// <returns>The retrieved recipe in a .json format</returns>
         [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(Recipe))]
         [ProducesResponseType(400)]
@@ -64,7 +76,15 @@ namespace WebRecipesBE.Controllers
         }
 
 
+        /// <summary>
+        /// Creates a recipe
+        /// </summary>
+        /// <param name="categoryId"> The category that will specify the recipe </param>
+        /// <param name="userId"> The ID of the user who is creating the recipe </param>
+        /// <param name="recipeCreate"> The body of the recipe in a .json format </param>
+        /// <returns>201 if created , other error if something went wrong</returns>
         [HttpPost]
+        [ProducesResponseType(201)]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         public IActionResult CreateRecipe([FromQuery] int categoryId,[FromQuery] int userId, [FromBody] RecipeDto recipeCreate)//reikia FromBody , nes jis paims data is jsono
@@ -94,9 +114,15 @@ namespace WebRecipesBE.Controllers
                 ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);
             }
-            return Ok("Successfully created");
+            return StatusCode(201,"Successfully created");
         }
 
+
+        /// <summary>
+        /// Updates a specific recipe by ID
+        /// </summary>
+        /// <param name="recipeId"> The ID of the recipe to update </param>
+        /// <returns>No content</returns>
         [HttpPut("{recipeId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -132,7 +158,11 @@ namespace WebRecipesBE.Controllers
             return NoContent();
         }
 
-
+        /// <summary>
+        /// Deletes a specific recipe by ID
+        /// </summary>
+        /// <param name="recipeId"> The ID of the recipe to delete </param>
+        /// <returns>No content</returns>
         [HttpDelete("{recipeId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]

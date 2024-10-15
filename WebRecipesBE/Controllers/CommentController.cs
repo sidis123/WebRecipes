@@ -25,6 +25,11 @@ namespace WebRecipesBE.Controllers
             _recipeRepository = recipeRepository;
         }
 
+
+        /// <summary>
+        /// Retrieves All comments
+        /// </summary>
+        /// <returns>All of the comments as a list</returns>
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Comment>))]
         public IActionResult GetAllComments()
@@ -39,6 +44,12 @@ namespace WebRecipesBE.Controllers
             return Ok(recipes);
         }
 
+
+        /// <summary>
+        /// Retrieves a specific comment by ID
+        /// </summary>
+        /// <param name="id"> The ID of the comment to retrieve </param>
+        /// <returns>The retrieved comment</returns>
         [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(Comment))]
         [ProducesResponseType(400)]
@@ -57,7 +68,16 @@ namespace WebRecipesBE.Controllers
             return Ok(recipe);
         }
 
+
+        /// <summary>
+        /// Creates a Comment
+        /// </summary>
+        /// <param name="userId"> The ID of the user who wrote the comment </param>
+        /// <param name="recipeId"> The ID of the recipe that the comment ios written on </param>
+        /// <param name="commentCreate"> The body ofg the comment in .json format </param>
+        /// <returns>201 if successfully created , other code if something went wrong</returns>
         [HttpPost]
+        [ProducesResponseType(201)]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         public IActionResult CreateComment([FromQuery] int userId, [FromQuery] int recipeId ,[FromBody] CommentDto commentCreate)//reikia FromBody , nes jis paims data is jsono
@@ -90,9 +110,15 @@ namespace WebRecipesBE.Controllers
                 ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);
             }
-            return Ok("Successfully created");
+            return StatusCode(201, "Successfully created");
         }
 
+
+        /// <summary>
+        /// Updates a specific comment by ID
+        /// </summary>
+        /// <param name="commentId"> The ID of the comment to update </param>
+        /// <returns>No content</returns>
         [HttpPut("{commentId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -128,6 +154,12 @@ namespace WebRecipesBE.Controllers
             return NoContent();
         }
 
+
+        /// <summary>
+        /// Deletes a specific comment by ID
+        /// </summary>
+        /// <param name="commentId"> The ID of the comment to delete </param>
+        /// <returns>No content</returns>
         [HttpDelete("{commentId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
