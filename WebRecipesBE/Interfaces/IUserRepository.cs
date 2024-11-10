@@ -10,6 +10,8 @@ namespace WebRecipesBE.Interfaces
         bool DeleteUser(User user);//reikia paduoti entity o ne tik id !!!! id gausim per parametrus
         ICollection<User> GetAllUsers();
         bool UserExists(int id);
+        User Authenticate(string email, string password);
+
 
         bool Save();
     }

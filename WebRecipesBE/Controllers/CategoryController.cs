@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebRecipesBE.DTO;
 using WebRecipesBE.Interfaces;
@@ -6,6 +7,7 @@ using WebRecipesBE.Models;
 
 namespace WebRecipesBE.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoryController : Controller

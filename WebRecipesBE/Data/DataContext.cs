@@ -18,6 +18,8 @@ namespace WebRecipesBE.Data
         public DbSet<User> Users { get; set; }
 
         public DbSet<RecipeCategory> RecipeCategories { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

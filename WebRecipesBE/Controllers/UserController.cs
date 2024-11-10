@@ -1,9 +1,13 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using WebRecipesBE.DTO;
 using WebRecipesBE.Interfaces;
 using WebRecipesBE.Models;
 using WebRecipesBE.Repository;
+using WebRecipesBE.Security;
+
 
 namespace WebRecipesBE.Controllers
 {
@@ -11,14 +15,90 @@ namespace WebRecipesBE.Controllers
     [ApiController]
     public class UserController : Controller
     {
+        private readonly AuthService _authService;
+        private readonly TokenService _tokenService;
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
+        private readonly JwtSettings _jwtSettings;
 
-        public UserController(IUserRepository userRepository , IMapper mapper)
+        public UserController(AuthService authService, TokenService tokenService, IUserRepository userRepository , IMapper mapper, IOptions<JwtSettings> jwtSettings)
         {
+            _authService = authService;
+            _tokenService = tokenService;
             _userRepository = userRepository;
             _mapper = mapper;
+            _jwtSettings = jwtSettings.Value;
         }
+
+
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] LoginDto loginDto)
+        {
+            Console.WriteLine("LOGINAS PASPAUSTAS VAZIUOJAM BLE");
+            // Step 1: Authenticate the user
+            var user = _userRepository.Authenticate(loginDto.Email, loginDto.Password);// Assuming you have an Authenticate method
+            Console.WriteLine(user);
+            if (user == null)
+            {
+                return Unauthorized("Invalid credentials");
+            }
+
+            // Step 2: Generate tokens using AuthService
+            var accessToken = _authService.GenerateAccessToken(user);
+            var refreshToken = _authService.GenerateRefreshToken();
+
+            // Step 3: Save the refresh token in the database
+            var refreshTokenEntry = new RefreshToken
+            {
+                Token = refreshToken,
+                UserId = user.id_Vartotojas,
+                Expiration = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpirationDays)
+            };
+            _tokenService.SaveRefreshToken(refreshTokenEntry);
+
+            // Step 4: Return both tokens to the client
+            return Ok(new { AccessToken = accessToken, RefreshToken = refreshToken });
+        }
+
+        [HttpPost("logout")]
+        public IActionResult Logout([FromBody] RefreshTokenDto refreshTokenDto)
+        {
+            var result = _tokenService.RevokeRefreshToken(refreshTokenDto.Token);
+            if (!result)
+            {
+                return BadRequest("Invalid refresh token.");
+            }
+            return NoContent(); // Successfully logged out
+        }
+
+        [HttpPost("refresh-token")]
+        public IActionResult RefreshToken([FromBody] RefreshTokenDto refreshTokenDto)
+        {
+            // Step 1: Validate the refresh token
+            var existingToken = _tokenService.GetRefreshToken(refreshTokenDto.Token);
+            if (existingToken == null || existingToken.Expiration < DateTime.UtcNow)
+            {
+                return Unauthorized("Invalid or expired refresh token");
+            }
+
+            // Step 2: Get the associated user
+            var user = _userRepository.GetUser(existingToken.UserId);
+            if (user == null)
+            {
+                return Unauthorized("User not found");
+            }
+
+            // Step 3: Generate a new access token and a new refresh token
+            var newAccessToken = _authService.GenerateAccessToken(user);
+            var newRefreshToken = _authService.GenerateRefreshToken();
+
+            // Step 4: Update the refresh token in the database
+            _tokenService.UpdateRefreshToken(existingToken, newRefreshToken, _jwtSettings.RefreshTokenExpirationDays);
+
+            // Step 5: Return the new tokens to the client
+            return Ok(new { AccessToken = newAccessToken, RefreshToken = newRefreshToken });
+        }
+
 
 
         /// <summary>
@@ -29,7 +109,7 @@ namespace WebRecipesBE.Controllers
         [ProducesResponseType(200, Type = typeof(IEnumerable<User>))]
         public IActionResult GetAllUsers()
         {
-            
+            Console.WriteLine("Opa getinam visus dawajjjjjjjjjjjjjjj");
             var recipes = _mapper.Map<List<UserDto>>(_userRepository.GetAllUsers());
 
             if (!ModelState.IsValid)
@@ -165,5 +245,30 @@ namespace WebRecipesBE.Controllers
             }
             return NoContent();
         }
+
+        [Authorize(Policy = "AdminOnly")]
+        [HttpGet("admin-only-endpoint")]
+        public IActionResult AdminOnlyEndpoint()
+        {
+            return Ok("This is an admin-only endpoint.");
+        }
+
+        [Authorize(Policy = "UserOrAdmin")]
+        [HttpGet("user-or-admin-endpoint")]
+        public IActionResult UserOrAdminEndpoint()
+        {
+            return Ok("This endpoint is accessible to users and admins.");
+        }
+
+        [Authorize(Policy = "GuestOrHigher")]
+        [HttpGet("guest-or-higher-endpoint")]
+        public IActionResult GuestOrHigherEndpoint()
+        {
+            return Ok("This endpoint is accessible to guests, users, and admins.");
+        }
+
+
+
+
     }
 }

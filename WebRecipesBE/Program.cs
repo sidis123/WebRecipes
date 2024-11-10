@@ -8,9 +8,55 @@ using WebRecipesBE.Data;
 using WebRecipesBE.Interfaces;
 using WebRecipesBE.Repository;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using WebRecipesBE.Security;
+using System.Security.Claims;
 
 
 var builder = WebApplication.CreateBuilder(args);
+var config = builder.Configuration;
+var jwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
+builder.Services.Configure<JwtSettings>(jwtSettingsSection);
+
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(x =>
+{
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidIssuer = config["JwtSettings:Issuer"],
+        ValidAudience = config["JwtSettings:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JwtSettings:AccessTokenSecret"])),
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true
+    };
+});
+
+
+builder.Services.AddAuthorization(options =>
+{
+    // Admin-only policy (only accessible by role = 3)
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireAssertion(context =>
+            context.User.HasClaim(c => c.Type == ClaimTypes.Role && c.Value == "3")));
+
+    // User or Admin policy (accessible by role = 2 or role = 3)
+    options.AddPolicy("UserOrAdmin", policy =>
+        policy.RequireAssertion(context =>
+            context.User.HasClaim(c => c.Type == ClaimTypes.Role && (c.Value == "2" || c.Value == "3"))));
+
+    // Guest or higher policy (accessible by role = 1, role = 2, or role = 3)
+    options.AddPolicy("GuestOrHigher", policy =>
+        policy.RequireAssertion(context =>
+            context.User.HasClaim(c => c.Type == ClaimTypes.Role && (c.Value == "1" || c.Value == "2" || c.Value == "3"))));
+});
+
 
 // Add services to the container.
 
@@ -37,6 +83,9 @@ builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<TokenService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.AddCors(options =>
@@ -93,6 +142,9 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowReactApp");
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseAuthorization();
 

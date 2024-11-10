@@ -50,5 +50,10 @@ namespace WebRecipesBE.Repository
         {
             return _context.Users.Any(r => r.id_Vartotojas == id);
         }
+
+        public User Authenticate(string email, string password)
+        {
+            return _context.Users.FirstOrDefault(u => u.email == email && u.password == password);
+        }
     }
 }
