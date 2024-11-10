@@ -18,7 +18,7 @@ Category -> recipe -> review/comment
 
 ## Tech stack as of now
 
-• FE - angular
+• FE - react
 
 • BE - .Net
 

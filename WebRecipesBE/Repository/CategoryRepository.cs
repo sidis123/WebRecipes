@@ -40,6 +40,11 @@ namespace WebRecipesBE.Repository
             return _context.Categories.Where(r => r.id_Kategorija == id).FirstOrDefault();
         }
 
+        public Category GetCategoryWithRecipes(int id)
+        {
+            return _context.Categories.Include(c => c.ReceptuKategorijos).ThenInclude(rc => rc.Recipe).FirstOrDefault(c => c.id_Kategorija == id);
+        }
+
         public bool Save()
         {
             var saved = _context.SaveChanges();
@@ -51,5 +56,6 @@ namespace WebRecipesBE.Repository
             _context.Update(category);
             return Save();
         }
+
     }
 }

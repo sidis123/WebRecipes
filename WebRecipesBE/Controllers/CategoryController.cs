@@ -164,5 +164,34 @@ namespace WebRecipesBE.Controllers
             }
             return NoContent();
         }
+
+        /// <summary>
+        /// Returns a category with its recipes
+        /// </summary>
+        /// <param name="Catid"></param>
+        /// <returns></returns>
+        [HttpGet("{Catid}/receptai")]
+        [ProducesResponseType(200, Type = typeof(CategoryWithRecipesDto))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
+        public IActionResult GetCategoryWithRecipes(int Catid)
+        {
+            if (!_categoryRepository.CategoryExists(Catid))
+            {
+                return NotFound();
+            }
+
+            var category = _categoryRepository.GetCategoryWithRecipes(Catid);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var categoryWithRecipesDto = _mapper.Map<CategoryWithRecipesDto>(category);
+
+            return Ok(categoryWithRecipesDto);
+        }
+
     }
 }

@@ -16,6 +16,8 @@ namespace WebRecipesBE.Helper
             CreateMap<CommentDto, Comment>();
             CreateMap<User, UserDto>();
             CreateMap<UserDto, User>();
+            CreateMap<Category, CategoryWithRecipesDto>()
+            .ForMember(dest => dest.Receptai, opt => opt.MapFrom(src => src.ReceptuKategorijos.Select(rc => rc.Recipe)));
         }
     }
 }

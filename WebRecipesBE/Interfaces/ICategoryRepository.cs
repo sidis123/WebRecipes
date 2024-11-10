@@ -11,5 +11,6 @@ namespace WebRecipesBE.Interfaces
         ICollection<Category> GetAllCategories();
         bool CategoryExists(int id);
         bool Save();
+        Category GetCategoryWithRecipes(int id);
     }
 }

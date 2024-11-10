@@ -38,6 +38,13 @@
             <param name="categoryId"> The ID of the category to delete </param>
             <returns>No content</returns>
         </member>
+        <member name="M:WebRecipesBE.Controllers.CategoryController.GetCategoryWithRecipes(System.Int32)">
+            <summary>
+            Returns a category with its recipes
+            </summary>
+            <param name="Catid"></param>
+            <returns></returns>
+        </member>
         <member name="M:WebRecipesBE.Controllers.CommentController.GetAllComments">
             <summary>
             Retrieves All comments
