@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 import {
+  CButton,
   CCloseButton,
   CSidebar,
   CSidebarBrand,
@@ -9,11 +11,13 @@ import {
   CSidebarHeader,
   CSidebarToggler,
 } from '@coreui/react'
+
+import { cilLockLocked } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
 
 import { AppSidebarNav } from './AppSidebarNav'
 
-import { logo } from 'src/assets/brand/logo'
+import logo from 'src/assets/brand/logo.jpg'
 import { sygnet } from 'src/assets/brand/sygnet'
 
 // sidebar nav config
@@ -23,6 +27,25 @@ const AppSidebar = () => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
   const sidebarShow = useSelector((state) => state.sidebarShow)
+  const navigate = useNavigate()
+  const [isHovered, setIsHovered] = useState(false)
+
+  const handleLogOut = () => {
+    localStorage.removeItem('accessToken')
+    dispatch({ type: 'set', user: null })
+    navigate('/login')
+  }
+  const buttonStyle = {
+    backgroundColor: isHovered ? '#0056b3' : '#007bff',
+    color: isHovered ? '#f8f9fa' : 'white',
+    transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+    boxShadow: isHovered ? '0 4px 8px rgba(0, 0, 0, 0.2)' : 'none',
+    transition: 'all 0.3s ease',
+    cursor: 'pointer',
+    border: 'none',
+    padding: '10px 20px',
+    borderRadius: '4px',
+  }
 
   return (
     <CSidebar
@@ -36,6 +59,9 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarHeader className="border-bottom">
+        <h4 style={{ color: '#999' }}>
+          <img src={logo} alt="logo" style={{ width: '120%' }} />
+        </h4>
         <CSidebarBrand to="/">
           <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
           <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
@@ -48,9 +74,15 @@ const AppSidebar = () => {
       </CSidebarHeader>
       <AppSidebarNav items={navigation} />
       <CSidebarFooter className="border-top d-none d-lg-flex">
-        <CSidebarToggler
-          onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
-        />
+        <CButton
+          onClick={handleLogOut}
+          style={buttonStyle}
+          onMouseEnter={() => setIsHovered(true)} // Trigger hover state
+          onMouseLeave={() => setIsHovered(false)} // Remove hover state
+        >
+          <CIcon icon={cilLockLocked} className="me-2" />
+          Logout
+        </CButton>
       </CSidebarFooter>
     </CSidebar>
   )
