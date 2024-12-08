@@ -8,5 +8,6 @@ namespace WebRecipesBE.DTO
         public string pavadinimas { get; set; }
         public string tekstas { get; set; }
         public string instrukcija { get; set; }
+        public string PictureUrl { get; set; }
     }
 }
