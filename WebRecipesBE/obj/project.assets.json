@@ -4248,11 +4248,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj",
+      "projectUniqueName": "C:\\Users\\tnaru\\Desktop\\WebReceptai\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj",
       "projectName": "WebRecipesBE",
-      "projectPath": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj",
+      "projectPath": "C:\\Users\\tnaru\\Desktop\\WebReceptai\\WebRecipes\\WebRecipesBE\\WebRecipesBE.csproj",
       "packagesPath": "C:\\Users\\tnaru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\obj\\",
+      "outputPath": "C:\\Users\\tnaru\\Desktop\\WebReceptai\\WebRecipes\\WebRecipesBE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
