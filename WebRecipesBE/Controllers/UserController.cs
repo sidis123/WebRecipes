@@ -37,6 +37,7 @@ namespace WebRecipesBE.Controllers
             Console.WriteLine("LOGINAS PASPAUSTAS VAZIUOJAM BLE");
             // Step 1: Authenticate the user
             var user = _userRepository.Authenticate(loginDto.Email, loginDto.Password);// Assuming you have an Authenticate method
+            Console.WriteLine("cia musu useris :");
             Console.WriteLine(user);
             if (user == null)
             {
@@ -57,8 +58,21 @@ namespace WebRecipesBE.Controllers
             _tokenService.SaveRefreshToken(refreshTokenEntry);
 
             // Step 4: Return both tokens to the client
-            return Ok(new { AccessToken = accessToken, RefreshToken = refreshToken });
-        }
+            return Ok(new
+            {
+                AccessToken = accessToken,
+                RefreshToken = refreshToken,
+                User = new
+                {
+                    user.id_Vartotojas,
+                    user.email,
+                    user.vardas,
+                    user.pavarde,
+                    user.telefonas,
+                    user.role,
+                }
+            });
+            }
 
         [HttpPost("logout")]
         public IActionResult Logout([FromBody] RefreshTokenDto refreshTokenDto)
