@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
+import axios from 'axios'
 
 import {
   CAvatar,
@@ -56,16 +57,51 @@ import MainChart from './MainChart'
 import { useSelector } from 'react-redux'
 
 const Dashboard = () => {
+  const [recipes, setRecipes] = useState([])
   const user = useSelector((state) => state.user)
+  const [recipiesLoading, setRecipiesLoading] = useState(true)
   useEffect(() => {
     console.log('User:', user)
+    fetchRecipes()
+    if (!recipiesLoading) {
+      console.log('Recipes:', recipes)
+    }
   }, [])
 
-  return (
-    <>
-      <h1>home</h1>
-    </>
-  )
+  const fetchRecipes = async () => {
+    setRecipiesLoading(true)
+    axios
+      .get('https://localhost:7120/api/Recipe')
+      .then((response) => {
+        setRecipes(response.data)
+        console.log('Recipes:', response.data)
+        setRecipiesLoading(false)
+      })
+      .catch((error) => {
+        setRecipiesLoading(false)
+        console.error('Error fetching recipes:', error)
+      })
+  }
+
+  if (recipiesLoading) {
+    return (
+      <div className="d-flex justify-content-center align-items-center">
+        <CProgress color="info" />
+      </div>
+    )
+  } else {
+    return (
+      <>
+        <h1>home</h1>
+        {recipes.map((r, index) => (
+          <div key={index}>
+            <h2>{r.pavadinimas}</h2>
+            <img src={`${r.pictureUrl}`} alt={r.pavadinimas} />
+          </div>
+        ))}
+      </>
+    )
+  }
 }
 
 export default Dashboard

@@ -29,6 +29,7 @@ import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
 
 const AppHeader = () => {
+  const user = useSelector((state) => state.user)
   const headerRef = useRef()
   const { colorMode, setColorMode } = useColorModes('coreui-free-react-admin-template-theme')
 
@@ -51,10 +52,13 @@ const AppHeader = () => {
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
+        <h3 style={{ justifyContent: 'left', flex: 'auto', margin: '10px' }}>
+          Welcome {user.vardas}
+        </h3>
         <CHeaderNav className="d-none d-md-flex">
           <CNavItem>
             <CNavLink to="/dashboard" as={NavLink}>
-              Dashboard
+              Home
             </CNavLink>
           </CNavItem>
           <CNavItem>
