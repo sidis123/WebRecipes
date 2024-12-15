@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useEffect, useState } from 'react'
-import { CCard, CCardBody, CCardHeader, CRow, CCol, CAvatar } from '@coreui/react'
+import { CCard, CCardBody, CCardHeader, CRow, CCol, CButton, CFormInput } from '@coreui/react'
 
-const AllRecipeComments = ({ recipeId }) => {
+const AllRecipeComments = ({ recipeId, refetch, setNeedsRefresh }) => {
   const token = localStorage.getItem('token')
-  const [comments, setComments] = useState([])
+  const userId = localStorage.getItem('userid')
+  const [comments, setComments] = useState([]) // State to hold comments
+  const [editableCommentId, setEditableCommentId] = useState(null) // Tracks the comment being edited
+  const [editedText, setEditedText] = useState('') // Tracks the text being edited
+
   useEffect(() => {
     fetchComments()
   }, [])
+
+  useEffect(() => {
+    if (refetch) {
+      fetchComments()
+    }
+  }, [refetch])
+
   const fetchComments = async () => {
     axios
       .get(`https://localhost:7120/api/Comment`, {
@@ -21,11 +31,67 @@ const AllRecipeComments = ({ recipeId }) => {
           (comment) => comment.recipeid_Receptas === recipeId,
         )
         setComments(filteredComments)
+        setNeedsRefresh()
       })
       .catch((error) => {
         console.error('Error fetching comments:', error)
       })
   }
+
+  const handleEditClick = (commentId, commentText, comment) => {
+    // Toggle between editing mode and saving mode
+    if (editableCommentId === commentId) {
+      handleSaveEdit(commentId, comment) // Save if already in edit mode
+    } else {
+      setEditableCommentId(commentId) // Set edit mode
+      setEditedText(commentText) // Set the current text to be edited
+    }
+  }
+
+  const handleSaveEdit = (commentId, comment) => {
+    axios
+      .put(
+        `https://localhost:7120/api/Comment/${commentId}`,
+        {
+          id_Komentaras: commentId,
+          patiktukai: comment.patiktukai,
+          sukurimo_data: new Date().toISOString(),
+          tekstas: editedText,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      )
+      .then(() => {
+        alert('Comment edited successfully!')
+        setEditableCommentId(null) // Exit edit mode
+        fetchComments() // Refresh comments
+      })
+      .catch((error) => {
+        console.error('Error editing comment:', error)
+        alert('Failed to edit comment.')
+      })
+  }
+
+  const handleDelete = (commentId) => {
+    axios
+      .delete(`https://localhost:7120/api/Comment/${commentId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then(() => {
+        alert('Comment deleted successfully!')
+        fetchComments() // Refresh comments
+      })
+      .catch((error) => {
+        console.error('Error deleting comment:', error)
+        alert('Failed to delete comment.')
+      })
+  }
+
   return (
     <CRow className="justify-content-center mt-4">
       <CCol xs={12} md={10}>
@@ -38,14 +104,42 @@ const AllRecipeComments = ({ recipeId }) => {
                 <small>{new Date(comment.sukurimo_data).toLocaleString()}</small>
               </CCardHeader>
               <CCardBody>
-                <p>
-                  <strong>Comment:</strong> {comment.tekstas}
-                </p>
+                {/* Render editable input field or text */}
+                {editableCommentId === comment.id_Komentaras ? (
+                  <CFormInput
+                    value={editedText}
+                    onChange={(e) => setEditedText(e.target.value)}
+                    className="mb-2"
+                  />
+                ) : (
+                  <p>
+                    <strong>Comment:</strong> {comment.tekstas}
+                  </p>
+                )}
                 <div className="d-flex justify-content-between align-items-center">
-                  <div>
-                    <span className="text-muted">Likes:</span> {comment.patiktukai}
-                  </div>
-                  <CAvatar src="https://via.placeholder.com/40" size="md" className="me-2" />
+                  {parseInt(comment.userid_Vartotojas) === parseInt(userId) ? (
+                    <div className="d-flex ms-auto">
+                      <CButton
+                        color="info"
+                        size="sm"
+                        className="me-2"
+                        onClick={() =>
+                          handleEditClick(comment.id_Komentaras, comment.tekstas, comment)
+                        }
+                      >
+                        {editableCommentId === comment.id_Komentaras ? 'Save' : 'Edit'}
+                      </CButton>
+                      <CButton
+                        color="danger"
+                        size="sm"
+                        onClick={() => handleDelete(comment.id_Komentaras)}
+                      >
+                        Delete
+                      </CButton>
+                    </div>
+                  ) : (
+                    <span className="text-muted">User Comment</span>
+                  )}
                 </div>
               </CCardBody>
             </CCard>
@@ -57,4 +151,5 @@ const AllRecipeComments = ({ recipeId }) => {
     </CRow>
   )
 }
+
 export default AllRecipeComments

@@ -162,8 +162,7 @@
               "RelativeToolTip": "Controllers\\UserController.cs",
               "ViewState": "AQIAAAABAAAAAAAAAAAqwBUBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T05:59:31.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T05:59:31.664Z"
             },
             {
               "$type": "Document",
@@ -175,8 +174,7 @@
               "RelativeToolTip": "Security\\AuthService.cs",
               "ViewState": "AQIAABEAAAAAAAAAAIAwwBMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T13:27:36.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T13:27:36.789Z"
             },
             {
               "$type": "Document",
@@ -188,8 +186,7 @@
               "RelativeToolTip": "Seed.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T11:12:47.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T11:12:47.897Z"
             },
             {
               "$type": "Document",
@@ -213,8 +210,7 @@
               "RelativeToolTip": "Repository\\RecipeRepository.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAAYwDwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T06:30:09.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T06:30:09.446Z"
             },
             {
               "$type": "Document",
@@ -226,8 +222,7 @@
               "RelativeToolTip": "Controllers\\RecipeController.cs",
               "ViewState": "AQIAAJUAAAAAAAAAAAAowLAAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T05:59:26.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T05:59:26.861Z"
             },
             {
               "$type": "Document",
@@ -239,8 +234,7 @@
               "RelativeToolTip": "DTO\\RecipeDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T11:34:15.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T11:34:15.482Z"
             },
             {
               "$type": "Document",
@@ -252,8 +246,7 @@
               "RelativeToolTip": "Interfaces\\IRecipeRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T09:16:30.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T09:16:30.762Z"
             },
             {
               "$type": "Document",
@@ -265,8 +258,7 @@
               "RelativeToolTip": "Controllers\\CommentController.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAQwKAAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T05:59:23.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T05:59:23.73Z"
             },
             {
               "$type": "Document",
@@ -278,8 +270,7 @@
               "RelativeToolTip": "Models\\Recipe.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T09:47:34.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T09:47:34.39Z"
             },
             {
               "$type": "Document",
@@ -289,7 +280,7 @@
               "RelativeDocumentMoniker": "DTO\\CommentDto.cs",
               "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\DTO\\CommentDto.cs",
               "RelativeToolTip": "DTO\\CommentDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T07:12:42.919Z",
               "EditorCaption": ""
@@ -304,8 +295,7 @@
               "RelativeToolTip": "Interfaces\\ICategoryRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T05:44:23.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T05:44:23.186Z"
             },
             {
               "$type": "Document",
@@ -317,8 +307,7 @@
               "RelativeToolTip": "DTO\\CategoryDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T13:57:20.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T13:57:20.322Z"
             },
             {
               "$type": "Document",
@@ -330,8 +319,7 @@
               "RelativeToolTip": "Controllers\\CategoryController.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T05:44:33.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T05:44:33.555Z"
             },
             {
               "$type": "Document",
@@ -367,8 +355,7 @@
               "RelativeToolTip": "Interfaces\\IUserRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T06:03:28.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T06:03:28.511Z"
             },
             {
               "$type": "Document",
@@ -380,8 +367,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAACMAAAAAAAAAAAAcwFIAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T05:46:01.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T05:46:01.61Z"
             },
             {
               "$type": "Document",
@@ -393,8 +379,7 @@
               "RelativeToolTip": "DTO\\UserDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T10:35:37.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T10:35:37.546Z"
             },
             {
               "$type": "Document",
@@ -406,8 +391,7 @@
               "RelativeToolTip": "Repository\\UserRepository.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAcwDgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T06:06:27.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T06:06:27.126Z"
             },
             {
               "$type": "Document",

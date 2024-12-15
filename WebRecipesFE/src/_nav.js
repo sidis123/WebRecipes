@@ -36,8 +36,8 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Create Category',
-    to: '/create-category',
+    name: 'Categories Page',
+    to: '/category',
     icon: <CIcon icon={cilApps} customClassName="nav-icon" />,
   },
   {
@@ -46,8 +46,8 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Create User',
-    to: '/create-user',
+    name: 'Users Page',
+    to: '/user',
     icon: <CIcon icon={cilBlind} customClassName="nav-icon" />,
   },
   // {
