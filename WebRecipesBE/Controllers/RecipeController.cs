@@ -31,18 +31,29 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <returns>A list of recipes</returns>
         [HttpGet]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Recipe>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<object>))]
         public IActionResult GetAllRecipes()
         {
-            //auto map
-            var recipes = _mapper.Map<List<RecipeDto>>(_recipeRepository.GetAllRecipes());
+            var recipes = _recipeRepository.GetAllRecipes();
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            return Ok(recipes);
+
+            // Manually map the properties, including id_Receptas
+            var recipeList = recipes.Select(r => new
+            {
+                id = r.id_Receptas,
+                pavadinimas = r.pavadinimas,
+                tekstas = r.tekstas,
+                instrukcija = r.instrukcija,
+                pictureUrl = r.PictureUrl
+            }).ToList();
+
+            return Ok(recipeList);
         }
+
 
 
         /// <summary>
@@ -85,37 +96,45 @@ namespace WebRecipesBE.Controllers
         /// <returns>201 if created , other error if something went wrong</returns>
         [HttpPost]
         [ProducesResponseType(201)]
-        [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public IActionResult CreateRecipe([FromQuery] int categoryId,[FromQuery] int userId, [FromBody] RecipeDto recipeCreate)//reikia FromBody , nes jis paims data is jsono
+        [ProducesResponseType(422)]
+        [ProducesResponseType(500)]
+        public IActionResult CreateRecipe([FromQuery] int categoryId, [FromQuery] int userId, [FromBody] RecipeDto recipeCreate)
         {
             if (recipeCreate == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Invalid recipe data");
             }
-            var recipe = _recipeRepository.GetAllRecipes().Where(c => c.id_Receptas == recipeCreate.id_Receptas).FirstOrDefault();
 
-            if (recipe != null)
+            // Check if a recipe with the same "instrukcija" already exists
+            var existingRecipe = _recipeRepository.GetAllRecipes()
+                .FirstOrDefault(c => c.instrukcija == recipeCreate.instrukcija);
+            if (existingRecipe != null)
             {
-                ModelState.AddModelError("", "receptas jau sukurtas");
+                ModelState.AddModelError("", "Recipe already exists");
                 return StatusCode(422, ModelState);
             }
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
+            // Map DTO to Recipe
             var recipeMap = _mapper.Map<Recipe>(recipeCreate);
             recipeMap.User = _userRepository.GetUser(userId);
-            
 
-            if (!_recipeRepository.CreateRecipe(categoryId,userId,recipeMap))
+            // Call the repository to insert the recipe (ID is auto-generated)
+            if (!_recipeRepository.CreateRecipe(categoryId, userId, recipeMap))
             {
                 ModelState.AddModelError("", "Something went wrong while saving");
                 return StatusCode(500, ModelState);
             }
-            return StatusCode(201,"Successfully created");
+
+            return StatusCode(201, "Successfully created");
         }
+
+
 
 
         /// <summary>
@@ -133,30 +152,48 @@ namespace WebRecipesBE.Controllers
             {
                 return BadRequest(ModelState);
             }
-            if (recipeId != updatedRecipe.id_Receptas)
-            {
-                return BadRequest(ModelState);
-            }
+
             if (!_recipeRepository.RecipeExists(recipeId))
             {
                 return NotFound();
             }
+
             if (!ModelState.IsValid)
             {
-                return BadRequest();
+                return BadRequest(ModelState);
             }
 
-            var recipeMap = _mapper.Map<Recipe>(updatedRecipe);
+            // Retrieve the existing recipe from the database
+            var existingRecipe = _recipeRepository.GetRecipe(recipeId);
+            if (existingRecipe == null)
+            {
+                return NotFound();
+            }
 
-            recipeMap.User = _userRepository.GetUser(_recipeRepository.GetUserIdFromRecipe(recipeMap));
-            
-            if (!_recipeRepository.UpdateRecipe(recipeMap))
+            // Map updated properties from DTO to the existing recipe
+            _mapper.Map(updatedRecipe, existingRecipe);
+
+            // Ensure the User object is valid
+            var userId = _recipeRepository.GetUserIdFromRecipe(existingRecipe);
+            var user = _userRepository.GetUser(userId);
+            if (user == null)
+            {
+                ModelState.AddModelError("", "The user associated with this recipe does not exist.");
+                return BadRequest(ModelState);
+            }
+
+            existingRecipe.User = user;
+
+            // Attempt to update the recipe
+            if (!_recipeRepository.UpdateRecipe(existingRecipe))
             {
                 ModelState.AddModelError("", "Something went wrong updating recipe");
                 return StatusCode(500, ModelState);
             }
+
             return NoContent();
         }
+
 
         /// <summary>
         /// Deletes a specific recipe by ID

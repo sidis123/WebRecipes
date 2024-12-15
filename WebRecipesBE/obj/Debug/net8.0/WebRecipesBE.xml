@@ -9,6 +9,7 @@
             Retrieves all Categories 
             </summary>
             <returns>All categories as a list.</returns>
+            
         </member>
         <member name="M:WebRecipesBE.Controllers.CategoryController.GetCategory(System.Int32)">
             <summary>

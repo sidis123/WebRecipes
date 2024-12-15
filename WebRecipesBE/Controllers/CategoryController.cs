@@ -25,6 +25,8 @@ namespace WebRecipesBE.Controllers
         /// Retrieves all Categories 
         /// </summary>
         /// <returns>All categories as a list.</returns>
+        /// 
+        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Category>))]//jeigu lista grazinam ar daug tu dalyku grazinam tai reikia krc IEnumerable daryt
         public IActionResult GetCategories()

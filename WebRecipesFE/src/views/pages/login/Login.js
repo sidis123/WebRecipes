@@ -46,7 +46,8 @@ const Login = () => {
         password: state.password,
       })
       .then((response) => {
-        localStorage.setItem('accessToken', response.data.accessToken)
+        localStorage.setItem('token', response.data.accessToken)
+        localStorage.setItem('userid', response.data.user.id_Vartotojas)
         dispatch({ type: 'set_user', user: response.data.user })
         navigate('/')
       })
