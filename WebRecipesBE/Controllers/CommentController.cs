@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebRecipesBE.DTO;
 using WebRecipesBE.Interfaces;
@@ -30,6 +31,7 @@ namespace WebRecipesBE.Controllers
         /// Retrieves All comments
         /// </summary>
         /// <returns>All of the comments as a list</returns>
+        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Comment>))]
         public IActionResult GetAllComments()
@@ -50,6 +52,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="id"> The ID of the comment to retrieve </param>
         /// <returns>The retrieved comment</returns>
+        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(Comment))]
         [ProducesResponseType(400)]
@@ -76,6 +79,7 @@ namespace WebRecipesBE.Controllers
         /// <param name="recipeId"> The ID of the recipe that the comment ios written on </param>
         /// <param name="commentCreate"> The body ofg the comment in .json format </param>
         /// <returns>201 if successfully created , other code if something went wrong</returns>
+        [Authorize(Policy = "UserOrAdmin")]
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(204)]
@@ -119,6 +123,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="commentId"> The ID of the comment to update </param>
         /// <returns>No content</returns>
+        [Authorize(Policy = "UserOrAdmin")]
         [HttpPut("{commentId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -160,6 +165,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="commentId"> The ID of the comment to delete </param>
         /// <returns>No content</returns>
+        [Authorize(Policy = "UserOrAdmin")]
         [HttpDelete("{commentId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]

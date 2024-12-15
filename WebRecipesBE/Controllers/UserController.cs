@@ -119,6 +119,7 @@ namespace WebRecipesBE.Controllers
         /// Retrieves all the users
         /// </summary>
         /// <returns>A list of users</returns>
+        [Authorize(Policy = "AdminOnly")]
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<User>))]
         public IActionResult GetAllUsers()
@@ -138,6 +139,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="id"> The ID of the user to retrieve </param>
         /// <returns>200 with the body of the retrieved user in .json format</returns>
+        [Authorize(Policy = "AdminOnly")]
         [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(User))]
         [ProducesResponseType(400)]
@@ -161,6 +163,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="userCreate"> The body of the user entity in .json format </param>
         /// <returns>201 if the user was created succesfully, other code if something went wrong</returns>
+        [Authorize(Policy = "AdminOnly")]
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(204)]
@@ -197,6 +200,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="userId"> The ID of the user to update </param>
         /// <returns>No content</returns>
+        [Authorize(Policy = "AdminOnly")]
         [HttpPut("{userId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -235,6 +239,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="userId"> The ID of the user to delete </param>
         /// <returns>No content</returns>
+        [Authorize(Policy = "AdminOnly")]
         [HttpDelete("{userId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -259,30 +264,5 @@ namespace WebRecipesBE.Controllers
             }
             return NoContent();
         }
-
-        [Authorize(Policy = "AdminOnly")]
-        [HttpGet("admin-only-endpoint")]
-        public IActionResult AdminOnlyEndpoint()
-        {
-            return Ok("This is an admin-only endpoint.");
-        }
-
-        [Authorize(Policy = "UserOrAdmin")]
-        [HttpGet("user-or-admin-endpoint")]
-        public IActionResult UserOrAdminEndpoint()
-        {
-            return Ok("This endpoint is accessible to users and admins.");
-        }
-
-        [Authorize(Policy = "GuestOrHigher")]
-        [HttpGet("guest-or-higher-endpoint")]
-        public IActionResult GuestOrHigherEndpoint()
-        {
-            return Ok("This endpoint is accessible to guests, users, and admins.");
-        }
-
-
-
-
     }
 }

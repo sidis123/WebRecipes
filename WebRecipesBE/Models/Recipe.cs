@@ -7,11 +7,11 @@ namespace WebRecipesBE.Models
     {
         [Key]
         public int id_Receptas { get; set; }
-        [Column(TypeName ="nvarchar(100)")]
+        [Column(TypeName ="nvarchar(5000)")]
         public string pavadinimas { get; set; }
-        [Column(TypeName = "nvarchar(254)")]
+        [Column(TypeName = "nvarchar(5000)")]
         public string tekstas { get; set; }
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "nvarchar(5000)")]
         public string instrukcija { get; set; }
 
         public string PictureUrl { get; set; }

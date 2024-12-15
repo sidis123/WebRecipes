@@ -45,6 +45,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="Catid"> The ID of the category to retrieve </param>
         /// <returns>The retrieved category</returns>
+        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet("{Catid}")]
         [ProducesResponseType(200, Type = typeof(Category))]
         [ProducesResponseType(400)]
@@ -69,6 +70,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param> The body of a category in .json form </param>
         /// <returns>201 if created , other error code if something is wrong</returns>
+        [Authorize(Policy = "AdminOnly")]
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(204)]
@@ -106,6 +108,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="categoryId"> The ID of the category to update </param>
         /// <returns>No content</returns>
+        [Authorize(Policy = "AdminOnly")]
         [HttpPut("{categoryId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -144,6 +147,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="categoryId"> The ID of the category to delete </param>
         /// <returns>No content</returns>
+        [Authorize(Policy = "AdminOnly")]
         [HttpDelete("{categoryId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -174,6 +178,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="Catid"></param>
         /// <returns></returns>
+        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet("{Catid}/receptai")]
         [ProducesResponseType(200, Type = typeof(CategoryWithRecipesDto))]
         [ProducesResponseType(400)]

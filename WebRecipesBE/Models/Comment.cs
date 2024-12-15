@@ -9,7 +9,7 @@ namespace WebRecipesBE.Models
         public int id_Komentaras { get; set; }
         public int patiktukai { get; set; }
         public DateTime sukurimo_data { get; set; }
-        [Column(TypeName = "nvarchar(254)")]
+        [Column(TypeName = "nvarchar(5000)")]
         public string tekstas { get; set; }
 
         public int Userid_Vartotojas { get; set; }  // Foreign key for User

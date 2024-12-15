@@ -32,7 +32,7 @@ const RecipeModal = ({ recipe }) => {
       })
       .then((response) => {
         alert('Recipe deleted successfully!')
-        window.location.reload()
+        navigate('/')
       })
       .catch((error) => {
         console.error('Error deleting recipe:', error)
@@ -49,6 +49,7 @@ const RecipeModal = ({ recipe }) => {
         </div>
 
         <h2 className="recipe-title">{recipe.pavadinimas}</h2>
+        <h3 className="instructions-title">Aprašymas:</h3>
         <p className="recipe-description">{recipe.tekstas}</p>
 
         <h3 className="instructions-title">Gaminimo instrukcija:</h3>

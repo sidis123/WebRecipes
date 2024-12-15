@@ -54,8 +54,8 @@ const AllUsers = ({ needRefetch }) => {
   }
 
   return (
-    <div>
-      <CTable striped hover>
+    <div style={{ overflowX: 'auto' }}>
+      <CTable striped hover responsive>
         <CTableHead>
           <CTableRow>
             <CTableHeaderCell scope="col">User ID</CTableHeaderCell>

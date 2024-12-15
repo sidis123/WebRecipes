@@ -37,7 +37,7 @@
 
 .recipe-instructions {
   text-align: left;
-  max-width: 600px;
+  max-width: auto;
   line-height: 1.5;
 }
 

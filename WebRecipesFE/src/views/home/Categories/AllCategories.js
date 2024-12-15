@@ -54,8 +54,8 @@ const AllCategories = ({ needRefetch }) => {
   }
 
   return (
-    <div>
-      <CTable striped hover>
+    <div style={{ overflowX: 'auto' }}>
+      <CTable striped hover responsive>
         <CTableHead>
           <CTableRow>
             <CTableHeaderCell scope="col">Category ID</CTableHeaderCell>

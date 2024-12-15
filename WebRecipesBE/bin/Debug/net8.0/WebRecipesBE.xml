@@ -176,5 +176,17 @@
         <member name="M:WebRecipesBE.Migrations.AddRefreshTokensTable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:WebRecipesBE.Migrations.UpdateStringLenghts">
+            <inheritdoc />
+        </member>
+        <member name="M:WebRecipesBE.Migrations.UpdateStringLenghts.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebRecipesBE.Migrations.UpdateStringLenghts.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebRecipesBE.Migrations.UpdateStringLenghts.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

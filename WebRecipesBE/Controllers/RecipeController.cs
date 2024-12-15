@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebRecipesBE.DTO;
 using WebRecipesBE.Interfaces;
@@ -30,6 +31,7 @@ namespace WebRecipesBE.Controllers
         /// Retrieves all Recipes
         /// </summary>
         /// <returns>A list of recipes</returns>
+        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<object>))]
         public IActionResult GetAllRecipes()
@@ -62,6 +64,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="id"> The ID of the recipe to retrieve </param>
         /// <returns>The retrieved recipe in a .json format</returns>
+        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(Recipe))]
         [ProducesResponseType(400)]
@@ -95,6 +98,7 @@ namespace WebRecipesBE.Controllers
         /// <param name="userId"> The ID of the user who is creating the recipe </param>
         /// <param name="recipeCreate"> The body of the recipe in a .json format </param>
         /// <returns>201 if created , other error if something went wrong</returns>
+        [Authorize(Policy = "UserOrAdmin")]
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
@@ -143,6 +147,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="recipeId"> The ID of the recipe to update </param>
         /// <returns>No content</returns>
+        [Authorize(Policy = "UserOrAdmin")]
         [HttpPut("{recipeId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -201,6 +206,7 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="recipeId"> The ID of the recipe to delete </param>
         /// <returns>No content</returns>
+        [Authorize(Policy = "UserOrAdmin")]
         [HttpDelete("{recipeId}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]

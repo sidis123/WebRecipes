@@ -208,7 +208,7 @@ const CreateUser = ({ userioId, needRefetch }) => {
                   </CCol>
                   <CCol xs={12} md={6} lg={6}>
                     <CFormInput
-                      type="text"
+                      type="number"
                       id="role"
                       label="Role"
                       name="role"
@@ -301,7 +301,7 @@ const CreateUser = ({ userioId, needRefetch }) => {
                   </CCol>
                   <CCol xs={12} md={6} lg={6}>
                     <CFormInput
-                      type="text"
+                      type="number"
                       id="role"
                       label="Role"
                       name="role"
