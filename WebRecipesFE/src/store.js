@@ -12,6 +12,8 @@ const changeState = (state = initialState, { type, ...rest }) => {
       return { ...state, ...rest }
     case 'set_user':
       return { ...state, user: rest.user }
+    case 'reset_state':
+      return { ...initialState }
     default:
       return state
   }

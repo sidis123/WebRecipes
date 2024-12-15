@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\dto\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:dto\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +23,12 @@
       "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:controllers\\recipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\interfaces\\ireciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:interfaces\\ireciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\repository\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:repository\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\dto\\recipedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:security\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|c:\\users\\tnaru\\desktop\\webrecipes\\webrecipes\\webrecipesbe\\helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{530E4A06-6759-43A0-B51B-1486EF6B01D6}|WebRecipesBE.csproj|solutionrelative:helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -150,11 +150,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 39,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
@@ -166,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Security\\AuthService.cs",
               "RelativeDocumentMoniker": "Security\\AuthService.cs",
@@ -178,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Seed.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Seed.cs",
               "RelativeDocumentMoniker": "Seed.cs",
@@ -190,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -202,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RecipeRepository.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Repository\\RecipeRepository.cs",
               "RelativeDocumentMoniker": "Repository\\RecipeRepository.cs",
@@ -214,19 +214,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "RecipeController.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Controllers\\RecipeController.cs",
               "RelativeDocumentMoniker": "Controllers\\RecipeController.cs",
               "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Controllers\\RecipeController.cs",
               "RelativeToolTip": "Controllers\\RecipeController.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAAAowLAAAABPAAAA",
+              "ViewState": "AQIAAGUAAAAAAAAAAADwvzMAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T05:59:26.861Z"
+              "WhenOpened": "2024-10-13T05:59:26.861Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "RecipeDto.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\DTO\\RecipeDto.cs",
               "RelativeDocumentMoniker": "DTO\\RecipeDto.cs",
@@ -238,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IRecipeRepository.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Interfaces\\IRecipeRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\IRecipeRepository.cs",
@@ -250,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "CommentController.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Controllers\\CommentController.cs",
               "RelativeDocumentMoniker": "Controllers\\CommentController.cs",
@@ -262,19 +263,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Recipe.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Models\\Recipe.cs",
               "RelativeDocumentMoniker": "Models\\Recipe.cs",
               "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Models\\Recipe.cs",
               "RelativeToolTip": "Models\\Recipe.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T09:47:34.39Z"
+              "WhenOpened": "2024-10-13T09:47:34.39Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "CommentDto.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\DTO\\CommentDto.cs",
               "RelativeDocumentMoniker": "DTO\\CommentDto.cs",
@@ -287,7 +289,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T06:32:03.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ICategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Interfaces\\ICategoryRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\ICategoryRepository.cs",
@@ -299,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "CategoryDto.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\DTO\\CategoryDto.cs",
               "RelativeDocumentMoniker": "DTO\\CategoryDto.cs",
@@ -311,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoryController.cs",
@@ -323,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Security\\TokenService.cs",
               "RelativeDocumentMoniker": "Security\\TokenService.cs",
@@ -335,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Data\\DataContext.cs",
               "RelativeDocumentMoniker": "Data\\DataContext.cs",
@@ -347,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\IUserRepository.cs",
@@ -359,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -371,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\DTO\\UserDto.cs",
               "RelativeDocumentMoniker": "DTO\\UserDto.cs",
@@ -383,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\UserRepository.cs",
@@ -395,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\DTO\\LoginDto.cs",
               "RelativeDocumentMoniker": "DTO\\LoginDto.cs",
@@ -407,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "RefreshToken.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Models\\RefreshToken.cs",
               "RelativeDocumentMoniker": "Models\\RefreshToken.cs",
@@ -431,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "RefreshTokenDto.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\DTO\\RefreshTokenDto.cs",
               "RelativeDocumentMoniker": "DTO\\RefreshTokenDto.cs",
@@ -443,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Security\\JwtSettings.cs",
               "RelativeDocumentMoniker": "Security\\JwtSettings.cs",
@@ -488,18 +503,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T11:33:52.962Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\tnaru\\Desktop\\WebRecipes\\WebRecipes\\WebRecipesBE\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAADwvxEAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T06:32:03.364Z"
             },
             {
               "$type": "Document",

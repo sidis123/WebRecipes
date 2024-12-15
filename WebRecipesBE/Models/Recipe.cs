@@ -16,6 +16,8 @@ namespace WebRecipesBE.Models
 
         public string PictureUrl { get; set; }
 
+        public int Userid_Vartotojas { get; set; }
+
         public User User { get; set; }
 
         public ICollection<Comment> Comments { get; set; }

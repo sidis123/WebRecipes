@@ -5,11 +5,13 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import AllRecipeComments from './Comments/AllRecipeComments'
 import CreateComment from './Comments/CreateComment'
+import { useSelector } from 'react-redux'
 
 const RecipeModal = ({ recipe }) => {
   const token = localStorage.getItem('token')
   const navigate = useNavigate() // React Router navigation hook
   const [needsRefresh, setNeedsRefresh] = React.useState(false)
+  const user = useSelector((state) => state.user)
   const refreshComments = () => {
     setNeedsRefresh(true)
   }
@@ -51,15 +53,16 @@ const RecipeModal = ({ recipe }) => {
 
         <h3 className="instructions-title">Gaminimo instrukcija:</h3>
         <p className="recipe-instructions">{recipe.instrukcija}</p>
-
-        <div className="button-container">
-          <CButton color="primary" className="me-2" onClick={EditOrderPage}>
-            Edit
-          </CButton>
-          <CButton color="danger" onClick={DeleteRecipe}>
-            Delete
-          </CButton>
-        </div>
+        {(user?.role === 3 || (user?.role >= 2 && user.id_Vartotojas === recipe.kurejas)) && (
+          <div className="button-container">
+            <CButton color="primary" className="me-2" onClick={EditOrderPage}>
+              Edit
+            </CButton>
+            <CButton color="danger" onClick={DeleteRecipe}>
+              Delete
+            </CButton>
+          </div>
+        )}
       </div>
       <CreateComment recipeId={recipe.id} onCommentCreated={refreshComments} />
       <AllRecipeComments

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { CCard, CCardBody, CCardHeader, CRow, CCol, CButton, CFormInput } from '@coreui/react'
+import { useSelector } from 'react-redux'
 
 const AllRecipeComments = ({ recipeId, refetch, setNeedsRefresh }) => {
   const token = localStorage.getItem('token')
@@ -8,6 +9,7 @@ const AllRecipeComments = ({ recipeId, refetch, setNeedsRefresh }) => {
   const [comments, setComments] = useState([]) // State to hold comments
   const [editableCommentId, setEditableCommentId] = useState(null) // Tracks the comment being edited
   const [editedText, setEditedText] = useState('') // Tracks the text being edited
+  const user = useSelector((state) => state.user)
 
   useEffect(() => {
     fetchComments()
@@ -117,7 +119,7 @@ const AllRecipeComments = ({ recipeId, refetch, setNeedsRefresh }) => {
                   </p>
                 )}
                 <div className="d-flex justify-content-between align-items-center">
-                  {parseInt(comment.userid_Vartotojas) === parseInt(userId) ? (
+                  {parseInt(comment.userid_Vartotojas) === parseInt(userId) && user?.role >= 2 ? (
                     <div className="d-flex ms-auto">
                       <CButton
                         color="info"

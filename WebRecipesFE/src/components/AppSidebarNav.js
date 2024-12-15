@@ -4,10 +4,23 @@ import PropTypes from 'prop-types'
 
 import SimpleBar from 'simplebar-react'
 import 'simplebar-react/dist/simplebar.min.css'
-
+import { useSelector } from 'react-redux'
 import { CBadge, CNavLink, CSidebarNav } from '@coreui/react'
 
 export const AppSidebarNav = ({ items }) => {
+  const user = useSelector((state) => state.user)
+  const role = user?.role || 1 // Default to "Guest" if no role is defined
+
+  // Function to filter navigation items based on user role
+  const filterItemsByRole = (items, role) => {
+    return items.filter((item) => {
+      // Check if the item has a role restriction
+      if (item.allowedRoles) {
+        return item.allowedRoles.includes(role) // Include if role matches
+      }
+      return true // Include items without role restrictions
+    })
+  }
   const navLink = (name, icon, badge, indent = false) => {
     return (
       <>
@@ -49,7 +62,7 @@ export const AppSidebarNav = ({ items }) => {
     const Component = component
     return (
       <Component compact as="div" key={index} toggler={navLink(name, icon)} {...rest}>
-        {item.items?.map((item, index) =>
+        {filterItemsByRole(item.items, role).map((item, index) =>
           item.items ? navGroup(item, index) : navItem(item, index, true),
         )}
       </Component>
@@ -58,8 +71,9 @@ export const AppSidebarNav = ({ items }) => {
 
   return (
     <CSidebarNav as={SimpleBar}>
-      {items &&
-        items.map((item, index) => (item.items ? navGroup(item, index) : navItem(item, index)))}
+      {filterItemsByRole(items, role).map((item, index) =>
+        item.items ? navGroup(item, index) : navItem(item, index),
+      )}
     </CSidebarNav>
   )
 }

@@ -29,10 +29,12 @@ const AppSidebar = () => {
   const sidebarShow = useSelector((state) => state.sidebarShow)
   const navigate = useNavigate()
   const [isHovered, setIsHovered] = useState(false)
+  const user = useSelector((state) => state.user) // Access user from Redux
 
   const handleLogOut = () => {
-    localStorage.removeItem('accessToken')
-    dispatch({ type: 'set', user: null })
+    localStorage.removeItem('token')
+    localStorage.removeItem('userid')
+    dispatch({ type: 'reset_state' })
     navigate('/login')
   }
   const buttonStyle = {
@@ -74,15 +76,27 @@ const AppSidebar = () => {
       </CSidebarHeader>
       <AppSidebarNav items={navigation} />
       <CSidebarFooter className="border-top d-none d-lg-flex">
-        <CButton
-          onClick={handleLogOut}
-          style={buttonStyle}
-          onMouseEnter={() => setIsHovered(true)} // Trigger hover state
-          onMouseLeave={() => setIsHovered(false)} // Remove hover state
-        >
-          <CIcon icon={cilLockLocked} className="me-2" />
-          Logout
-        </CButton>
+        {user.id_Vartotojas ? (
+          <CButton
+            onClick={handleLogOut}
+            style={buttonStyle}
+            onMouseEnter={() => setIsHovered(true)} // Trigger hover state
+            onMouseLeave={() => setIsHovered(false)} // Remove hover state
+          >
+            <CIcon icon={cilLockLocked} className="me-2" />
+            Logout
+          </CButton>
+        ) : (
+          <CButton
+            onClick={() => navigate('/login')}
+            style={buttonStyle}
+            onMouseEnter={() => setIsHovered(true)} // Trigger hover state
+            onMouseLeave={() => setIsHovered(false)} // Remove hover state
+          >
+            <CIcon icon={cilLockLocked} className="me-2" />
+            Login
+          </CButton>
+        )}
       </CSidebarFooter>
     </CSidebar>
   )

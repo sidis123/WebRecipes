@@ -24,7 +24,7 @@ import {
   cilMoon,
   cilSun,
 } from '@coreui/icons'
-
+import { useNavigate } from 'react-router-dom'
 import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
 
@@ -32,6 +32,7 @@ const AppHeader = () => {
   const user = useSelector((state) => state.user)
   const headerRef = useRef()
   const { colorMode, setColorMode } = useColorModes('coreui-free-react-admin-template-theme')
+  const navigate = useNavigate()
 
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.sidebarShow)
@@ -52,20 +53,21 @@ const AppHeader = () => {
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
-        <h3 style={{ justifyContent: 'left', flex: 'auto', margin: '10px' }}>
-          Welcome {user.vardas}
-        </h3>
+        {console.log('useris', user)}
+        {user.id_Vartotojas ? (
+          <h3 style={{ justifyContent: 'left', flex: 'auto', margin: '10px' }}>
+            Welcome {user.vardas}
+          </h3>
+        ) : (
+          <h3 style={{ justifyContent: 'left', flex: 'auto', margin: '10px' }}>
+            Welcome Guest. Please register or login to our system.
+          </h3>
+        )}
         <CHeaderNav className="d-none d-md-flex">
           <CNavItem>
-            <CNavLink to="/dashboard" as={NavLink}>
+            <CNavLink to="/" as={NavLink}>
               Home
             </CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">User</CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">Settings</CNavLink>
           </CNavItem>
         </CHeaderNav>
       </CContainer>

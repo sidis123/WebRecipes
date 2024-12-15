@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { CCard, CCardBody, CRow, CCol, CFormTextarea, CButton } from '@coreui/react'
 import axios from 'axios'
+import { useSelector } from 'react-redux'
 
 const CreateComment = ({ recipeId, onCommentCreated }) => {
   const [state, setState] = useState({
@@ -11,6 +12,7 @@ const CreateComment = ({ recipeId, onCommentCreated }) => {
   const [isSubmitting, setIsSubmitting] = useState(false) // Loading state
   const token = localStorage.getItem('token')
   const userId = localStorage.getItem('userid')
+  const user = useSelector((state) => state.user)
 
   const handleChange = (e) => {
     setState({
@@ -53,34 +55,36 @@ const CreateComment = ({ recipeId, onCommentCreated }) => {
       .finally(() => setIsSubmitting(false)) // End loading
   }
 
-  return (
-    <CRow className="justify-content-center my-4">
-      <CCol xs={12} md={8}>
-        <CCard className="shadow-sm">
-          <CCardBody>
-            <h5 className="mb-3">Add a Comment</h5>
-            <CFormTextarea
-              rows={3}
-              placeholder="Write your comment here..."
-              name="tekstas"
-              value={state.tekstas}
-              onChange={handleChange}
-              className="mb-3"
-            ></CFormTextarea>
-            <div className="text-end">
-              <CButton
-                color="primary"
-                onClick={handleSubmit}
-                disabled={isSubmitting || !state.tekstas.trim()}
-              >
-                {isSubmitting ? 'Submitting...' : 'Comment'}
-              </CButton>
-            </div>
-          </CCardBody>
-        </CCard>
-      </CCol>
-    </CRow>
-  )
+  if (user?.role >= 2) {
+    return (
+      <CRow className="justify-content-center my-4">
+        <CCol xs={12} md={8}>
+          <CCard className="shadow-sm">
+            <CCardBody>
+              <h5 className="mb-3">Add a Comment</h5>
+              <CFormTextarea
+                rows={3}
+                placeholder="Write your comment here..."
+                name="tekstas"
+                value={state.tekstas}
+                onChange={handleChange}
+                className="mb-3"
+              ></CFormTextarea>
+              <div className="text-end">
+                <CButton
+                  color="primary"
+                  onClick={handleSubmit}
+                  disabled={isSubmitting || !state.tekstas.trim()}
+                >
+                  {isSubmitting ? 'Submitting...' : 'Comment'}
+                </CButton>
+              </div>
+            </CCardBody>
+          </CCard>
+        </CCol>
+      </CRow>
+    )
+  }
 }
 
 export default CreateComment

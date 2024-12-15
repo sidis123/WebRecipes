@@ -1,17 +1,7 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
-import {
-  cilDescription,
-  cilDrop,
-  cilPencil,
-  cilPuzzle,
-  cilSpeedometer,
-  cilStar,
-  cilApple,
-  cilBlind,
-  cilApps,
-} from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+import { cilSpeedometer, cilApple, cilApps, cilBlind } from '@coreui/icons'
+import { CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
   {
@@ -19,68 +9,44 @@ const _nav = [
     name: 'Home',
     to: '/home',
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+    allowedRoles: [1, 2, 3], // All roles can see this
   },
   {
     component: CNavTitle,
     name: 'Recipes',
+    allowedRoles: [2, 3], // User and Super Admin can see this
   },
   {
     component: CNavItem,
     name: 'Create Recipe',
     to: '/create-recipe',
     icon: <CIcon icon={cilApple} customClassName="nav-icon" />,
+    allowedRoles: [2, 3], // Only Super Admin can see this
   },
   {
     component: CNavTitle,
     name: 'Categories',
+    allowedRoles: [3], // Only Super Admin
   },
   {
     component: CNavItem,
     name: 'Categories Page',
     to: '/category',
     icon: <CIcon icon={cilApps} customClassName="nav-icon" />,
+    allowedRoles: [3], // Only Super Admin
   },
   {
     component: CNavTitle,
     name: 'Users',
+    allowedRoles: [3], // Guest and Super Admin
   },
   {
     component: CNavItem,
     name: 'Users Page',
     to: '/user',
     icon: <CIcon icon={cilBlind} customClassName="nav-icon" />,
+    allowedRoles: [3], // Guest and Super Admin
   },
-  // {
-  //   component: CNavTitle,
-  //   name: 'Extras',
-  // },
-  // {
-  //   component: CNavGroup,
-  //   name: 'Pages',
-  //   icon: <CIcon icon={cilStar} customClassName="nav-icon" />,
-  //   items: [
-  //     {
-  //       component: CNavItem,
-  //       name: 'Login',
-  //       to: '/login',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Register',
-  //       to: '/register',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Error 404',
-  //       to: '/404',
-  //     },
-  //     {
-  //       component: CNavItem,
-  //       name: 'Error 500',
-  //       to: '/500',
-  //     },
-  //   ],
-  // },
 ]
 
 export default _nav

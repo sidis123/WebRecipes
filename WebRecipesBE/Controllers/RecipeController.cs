@@ -48,7 +48,8 @@ namespace WebRecipesBE.Controllers
                 pavadinimas = r.pavadinimas,
                 tekstas = r.tekstas,
                 instrukcija = r.instrukcija,
-                pictureUrl = r.PictureUrl
+                pictureUrl = r.PictureUrl,
+                kurejas = r.Userid_Vartotojas,
             }).ToList();
 
             return Ok(recipeList);

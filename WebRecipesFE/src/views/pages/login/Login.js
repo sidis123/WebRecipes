@@ -29,6 +29,19 @@ const Login = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [loginError, setLoginError] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
+
+  const buttonStyle = {
+    backgroundColor: isHovered ? '#0056b3' : '#007bff',
+    color: isHovered ? '#f8f9fa' : 'white',
+    transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+    boxShadow: isHovered ? '0 4px 8px rgba(0, 0, 0, 0.2)' : 'none',
+    transition: 'all 0.3s ease',
+    cursor: 'pointer',
+    border: 'none',
+    padding: '10px 20px',
+    borderRadius: '4px',
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -46,6 +59,7 @@ const Login = () => {
         password: state.password,
       })
       .then((response) => {
+        console.log('Logged in:', response.data.user)
         localStorage.setItem('token', response.data.accessToken)
         localStorage.setItem('userid', response.data.user.id_Vartotojas)
         dispatch({ type: 'set_user', user: response.data.user })
@@ -132,6 +146,15 @@ const Login = () => {
                 </CCardBody>
               </CCard>
             </CCardGroup>
+            <CButton
+              onClick={() => navigate('/')}
+              style={buttonStyle}
+              onMouseEnter={() => setIsHovered(true)} // Trigger hover state
+              onMouseLeave={() => setIsHovered(false)} // Remove hover state
+            >
+              <CIcon className="me-2" />
+              Continue using as guest
+            </CButton>
           </CCol>
         </CRow>
       </CContainer>
