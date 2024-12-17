@@ -31,7 +31,6 @@ namespace WebRecipesBE.Controllers
         /// Retrieves all Recipes
         /// </summary>
         /// <returns>A list of recipes</returns>
-        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<object>))]
         public IActionResult GetAllRecipes()

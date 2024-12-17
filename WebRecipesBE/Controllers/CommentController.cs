@@ -31,7 +31,6 @@ namespace WebRecipesBE.Controllers
         /// Retrieves All comments
         /// </summary>
         /// <returns>All of the comments as a list</returns>
-        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Comment>))]
         public IActionResult GetAllComments()
@@ -52,7 +51,6 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="id"> The ID of the comment to retrieve </param>
         /// <returns>The retrieved comment</returns>
-        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(Comment))]
         [ProducesResponseType(400)]

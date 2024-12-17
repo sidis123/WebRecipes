@@ -7,7 +7,6 @@ using WebRecipesBE.Models;
 
 namespace WebRecipesBE.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoryController : Controller
@@ -26,7 +25,6 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <returns>All categories as a list.</returns>
         /// 
-        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Category>))]//jeigu lista grazinam ar daug tu dalyku grazinam tai reikia krc IEnumerable daryt
         public IActionResult GetCategories()
@@ -45,7 +43,6 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="Catid"> The ID of the category to retrieve </param>
         /// <returns>The retrieved category</returns>
-        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet("{Catid}")]
         [ProducesResponseType(200, Type = typeof(Category))]
         [ProducesResponseType(400)]
@@ -178,7 +175,6 @@ namespace WebRecipesBE.Controllers
         /// </summary>
         /// <param name="Catid"></param>
         /// <returns></returns>
-        [Authorize(Policy = "GuestOrHigher")]
         [HttpGet("{Catid}/receptai")]
         [ProducesResponseType(200, Type = typeof(CategoryWithRecipesDto))]
         [ProducesResponseType(400)]
